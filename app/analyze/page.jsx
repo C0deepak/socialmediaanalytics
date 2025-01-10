@@ -1,11 +1,13 @@
 'use client'
 
 import { HighlightedInsights } from '@/components/common/HighlightedInsights'
+import Loader from '@/components/common/Loader'
 import Dashboard from '@/components/common/PieChartComp'
 import React, { useEffect, useState } from 'react'
 
 const Analyze = () => {
     const [analytics, setAnalytics] = useState({})
+    const [loading, setLoading] = useState(true)
 
     const callLangflowAPI = async (inputBody) => {
         const url = "https://social-medial-analyst-with-langflow.onrender.com/process";
@@ -25,17 +27,20 @@ const Analyze = () => {
 
             const { message } = await response.json();
             setAnalytics(message)
+            setLoading(false)
         } catch (error) {
             console.error("Error calling the Langflow API:", error);
         }
     }
 
     useEffect(() => {
-        callLangflowAPI({ "text": "reels" })
+        callLangflowAPI({ "text": "videos" })
     }, [])
 
     return (
+
         <div className='py-28 md:py-32 px-4 md:px-16 flex flex-col gap-16'>
+            {loading ? <Loader /> : <></>}
             <div className='flex flex-col gap-8'>
                 <h2 className='text-foreground font-semibold text-xl md:text-3xl'>
                     Actionable

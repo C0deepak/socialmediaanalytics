@@ -84,7 +84,7 @@ const PieChartComp = ({ title, data, dataKey, label }) => {
                 <CardTitle>{title}</CardTitle>
                 <CardDescription>Insights based on average {label}</CardDescription>
             </CardHeader>
-            <CardContent className="flex-1 pb-0">
+            <CardContent className="flex-1 pb-0 text-center">
                 <ChartContainer
                     className="mx-auto aspect-square max-h-[250px]"
                     config={chartConfig}
@@ -134,7 +134,7 @@ const PieChartComp = ({ title, data, dataKey, label }) => {
                     </PieChart>
                 </ChartContainer>
             </CardContent>
-            <CardFooter className="flex-col gap-2 text-sm">
+            <CardFooter className="flex-col gap-2 text-sm text-center">
                 <div className="flex items-center gap-2 font-medium leading-none">
                     {label} insights <TrendingUp className="h-4 w-4" />
                 </div>
