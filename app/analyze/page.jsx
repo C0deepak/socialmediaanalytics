@@ -12,7 +12,7 @@ const Analyze = () => {
     const [loading, setLoading] = useState(false)
 
     const callLangflowAPI = async (inputBody) => {
-        const url = "https://social-medial-analyst-with-langflow.onrender.com/process";
+        const url = "https://social-media-analyst-with-langflow.vercel.app/process";
 
         try {
             const response = await fetch(url, {
@@ -76,7 +76,7 @@ const Analyze = () => {
                     <ul className='flex flex-col gap-4'>
                         {analytics?.top_hashtags && (
                             Array.isArray(analytics.top_hashtags) ? (
-                                <li>
+                                <ul className='flex flex-wrap gap-2'>
                                     {analytics.top_hashtags.map((hashtag, index) => (
                                         <span
                                             key={index}
@@ -85,7 +85,7 @@ const Analyze = () => {
                                             {hashtag}
                                         </span>
                                     ))}
-                                </li>
+                                </ul>
                             ) : (
                                 Object.entries(analytics.top_hashtags).map(([postType, hashtags]) => (
                                     <li key={postType}>

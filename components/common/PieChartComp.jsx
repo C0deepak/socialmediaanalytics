@@ -152,39 +152,39 @@ const Dashboard = ({ analytics }) => {
     // Transform data for chart
     const chartDataLikes = statistics
         ? [
-            { type: "Reels", value: statistics.reels.average_likes, fill: "hsl(var(--chart-1))" },
-            { type: "Videos", value: statistics.videos.average_likes, fill: "hsl(var(--chart-2))" },
-            { type: "Static Images", value: statistics.static_images.average_likes, fill: "hsl(var(--chart-3))" },
-            { type: "Carousels", value: statistics.carousels.average_likes, fill: "hsl(var(--chart-4))" },
+            { type: "Reels", value: statistics?.reels?.average_likes, fill: "hsl(var(--chart-1))" },
+            { type: "Videos", value: statistics?.videos?.average_likes, fill: "hsl(var(--chart-2))" },
+            { type: "Static Images", value: statistics?.static_images?.average_likes, fill: "hsl(var(--chart-3))" },
+            { type: "Carousels", value: statistics?.carousels?.average_likes, fill: "hsl(var(--chart-4))" },
         ]
         : [];
     // Transform data for chart
     const chartDataComments = statistics
         ? [
-            { type: "Reels", value: statistics.reels.average_comments, fill: "hsl(var(--chart-1))" },
-            { type: "Videos", value: statistics.videos.average_comments, fill: "hsl(var(--chart-2))" },
-            { type: "Static Images", value: statistics.static_images.average_comments, fill: "hsl(var(--chart-3))" },
-            { type: "Carousels", value: statistics.carousels.average_comments, fill: "hsl(var(--chart-4))" },
+            { type: "Reels", value: statistics?.reels?.average_comments, fill: "hsl(var(--chart-1))" },
+            { type: "Videos", value: statistics?.videos?.average_comments, fill: "hsl(var(--chart-2))" },
+            { type: "Static Images", value: statistics?.static_images?.average_comments, fill: "hsl(var(--chart-3))" },
+            { type: "Carousels", value: statistics?.carousels?.average_comments, fill: "hsl(var(--chart-4))" },
         ]
         : [];
 
     // Transform data for chart
     const chartDataShares = statistics
         ? [
-            { type: "Reels", value: statistics.reels.average_shares, fill: "hsl(var(--chart-1))" },
-            { type: "Videos", value: statistics.videos.average_shares, fill: "hsl(var(--chart-2))" },
-            { type: "Static Images", value: statistics.static_images.average_shares, fill: "hsl(var(--chart-3))" },
-            { type: "Carousels", value: statistics.carousels.average_shares, fill: "hsl(var(--chart-4))" },
+            { type: "Reels", value: statistics?.reels?.average_shares, fill: "hsl(var(--chart-1))" },
+            { type: "Videos", value: statistics?.videos?.average_shares, fill: "hsl(var(--chart-2))" },
+            { type: "Static Images", value: statistics?.static_images?.average_shares, fill: "hsl(var(--chart-3))" },
+            { type: "Carousels", value: statistics?.carousels?.average_shares, fill: "hsl(var(--chart-4))" },
         ]
         : [];
 
     // Transform data for chart
     const chartDataEngagement = statistics
         ? [
-            { type: "Reels", value: statistics.reels.average_engagement, fill: "hsl(var(--chart-1))" },
-            { type: "Videos", value: statistics.videos.average_engagement, fill: "hsl(var(--chart-2))" },
-            { type: "Static Images", value: statistics.static_images.average_engagement, fill: "hsl(var(--chart-3))" },
-            { type: "Carousels", value: statistics.carousels.average_engagement, fill: "hsl(var(--chart-4))" },
+            { type: "Reels", value: statistics?.reels?.average_engagement, fill: "hsl(var(--chart-1))" },
+            { type: "Videos", value: statistics?.videos?.average_engagement, fill: "hsl(var(--chart-2))" },
+            { type: "Static Images", value: statistics?.static_images?.average_engagement, fill: "hsl(var(--chart-3))" },
+            { type: "Carousels", value: statistics?.carousels?.average_engagement, fill: "hsl(var(--chart-4))" },
         ]
         : [];
 

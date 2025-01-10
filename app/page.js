@@ -36,7 +36,7 @@ export default function Home() {
         </Button>
       </div>
       <div className="flex relative -top-52 -z-10 justify-center">
-        <Image src={landingImg} alt="Dashboard image" />
+        <Image src={landingImg} alt="Dashboard image" className="w-full"/>
       </div>
     </section>
   );
