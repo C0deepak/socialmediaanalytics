@@ -8,7 +8,7 @@ export const HighlightedInsights = ({ insights }) => {
 
     const getHighlightedText = (text) => {
         const parts = text.split(highlightRegex)
-        return parts.map((part, index) => {
+        return parts?.map((part, index) => {
             if (highlightRegex.test(part)) {
                 return (
                     <span key={index} className="font-bold text-primary">
