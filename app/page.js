@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Stars } from "lucide-react";
+import landingImg from "@/public/LandingPg.png";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -26,7 +28,7 @@ export default function Home() {
           and optimize for success.
         </p>
 
-        <Button asChild className='rounded-full'>
+        <Button asChild className="rounded-full">
           <Link href="/analyze">
             Analyze
             <Stars size={16} className="ml-2" />
@@ -34,10 +36,7 @@ export default function Home() {
         </Button>
       </div>
       <div className="flex relative -top-52 -z-10 justify-center">
-        <img
-          src="LandingPg.png"
-          alt="Dashboard image"
-        />
+        <Image src={landingImg} alt="Dashboard image" />
       </div>
     </section>
   );
